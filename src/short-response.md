@@ -1,6 +1,7 @@
 # Short Responses
 
 For this assessment, aim to write a response with the following qualities:
+
 - [ ] Addresses all parts of the prompt
 - [ ] Accurately uses relevant technical terminology
 - [ ] Is free of grammar and spelling mistakes
@@ -26,7 +27,7 @@ const getLetterGrade = (score) => {
   }
 
   return "Your grade is: " + letter;
-}
+};
 
 console.log(getLetterGrade(95)); // This should print "Your grade is: A"
 console.log(getLetterGrade(82)); // This should print "Your grade is: B"
@@ -42,11 +43,9 @@ console.log(getLetterGrade(65)); // This should print "Your grade is: F"
 
 **Part A:**
 
-Your response...
-
 **Part B:**
 
-Your response...
+I would fix this problem by removing the `let` keyword in each of the loops and just updating the `letter` variable each loop.
 
 ---
 
@@ -69,7 +68,7 @@ console.log(originalSettings.volume);
 
 **Part A:**
 
-Your response...
+75 will be logged to the console because when the second object was created, the **values of the `keys`** didn’t get stored, the **references** to those values did, so if you change the value of a `key` when it's copied by reference, the original `key` will **also be updated**.
 
 **Part B:**
 
@@ -90,6 +89,7 @@ console.log(originalSettings.volume);
 ## Prompt 3
 
 Given this array of products and the code using `filter`:
+
 ```js
 const products = [
   { name: "Laptop", price: 1000, inStock: true },
@@ -99,15 +99,20 @@ const products = [
 ];
 
 const itemsInStock = products.filter((product) => {
-  return product.inStock
+  return product.inStock;
 });
 ```
 
 Walk through what happens in the first iteration of filter:
+
 - What is the value of `product`?
 - What gets returned from the callback?
 - What happens with that returned value?
 
 ### Response 3
 
-Your response...
+In the first iteration, the value of `product` is the two objects `Laptop` and `Watch`, the other two objects **will not** be returned in the new array that `filter` creates.
+
+The **list of the available products** gets returned after the first iteration of the `filter` higher order method.
+
+That returned value is saved in the variable called `itemsInStock`.
